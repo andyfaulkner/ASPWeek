@@ -1,0 +1,18 @@
+﻿@using StronglyTypedViewsExample.Models
+@Model IEnumerable<Album>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>My Album List</h2>
+<ul>
+    @foreach (Album r in Model)
+    {
+        <li>@r.title</li>
+        <li>@r.artist</li>
+        <li>@r.format</li>
+        <li>@r.price</li>
+    }
+</ul>
+
