@@ -3,11 +3,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Party Invites</h2>
+<div class="text-center">
+    <p><h2>Party Invites</h2>
+        <h3> going to have a party!</h3> <br />
 
-<p>We're going to have a party! <br />
-
-    <img src="~/images/party-03.jpg" height="30%" width="30%"/>
+        <img src="~/images/party-03.jpg" height="30%" width="30%" />
     </p>
-
-@Html.ActionLink("RSVP now", "RsvpForms")
+    <div class="btn btn-success">
+        @Html.ActionLink("RSVP now", "RsvpForms")
+    </div>
+</div>
