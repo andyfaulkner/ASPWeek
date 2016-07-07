@@ -1,0 +1,38 @@
+﻿@model MVCMoviesDatabase.Models.Movie
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <h4>Movies</h4>
+        <br />
+
+        @Html.HiddenFor(model => model.Id)
+        <div>
+            @Html.LabelFor(model => model.Title)
+            @Html.EditorFor(model => model.Title)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.ReleaseDate)
+            @Html.EditorFor(model => model.ReleaseDate)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Genre)
+            @Html.EditorFor(model => model.Genre)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Price)
+            @Html.EditorFor(model => model.Price)
+        </div>
+        <input type="submit" value="Save" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
